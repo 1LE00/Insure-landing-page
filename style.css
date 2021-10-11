@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'DM Serif Display', serif;
+}
+
+li{
+    list-style: none;   
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+@media screen and (min-width: 320px) {
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7.85vw 6.3vw;
+        position: relative;
+    }
+
+    nav .nav-logo img{
+        width: 112px;
+        height: 20px;
+        margin-top: 5px;
+    }
+
+    nav .nav-links{
+        display: none;
+    }
+
+    
+    nav .hamburger .hamburger-icon{
+        width: 28px;
+        height: 28px;
+        background-image: url(images/icon-hamburger.svg);
+        background-size: contain;
+    }
+
+    nav .hamburger .hamburger-links{
+        display: none;
+        position: absolute;
+        width: 100%;
+        min-height: 95vh;
+        background-color:  hsl(270, 9%, 17%);
+        left: 0px;
+        top: 24vw;
+        z-index: 10;
+        background-image: url(images/bg-pattern-mobile-nav.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 100%;
+    }
+
+    nav .hamburger .hamburger-links ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 6.3vw;
+    }
+
+    nav .hamburger .hamburger-links ul li{
+        color: hsl(0, 0%, 98%);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10vw;
+        font-size: 5vw;
+        font-weight: 700;
+    }
+
+    nav .hamburger .hamburger-links ul button{
+        color: rgb(250, 250, 250);
+        background-color: transparent;
+        border: 2px solid hsl(0,0%,98%);
+        padding: 4vw 25vw;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 5vw;
+        font-weight: 700;
+    
+    }
+
+    nav .hamburger .show{
+        display: block;
+    }
+
+    nav .hamburger .close{
+        background-image: url(images/icon-close.svg);
+    }
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-image: url(images/bg-pattern-intro-left-mobile.svg), url(images/bg-pattern-intro-right-mobile.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 45%, 33.5%;
+        background-position: 0 118vw, 100% 200vw;
+        position: relative;
+        padding-bottom: 48vw;
+    }
+
+    .header .image-intro{
+        background-image: url(images/image-intro-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 120.4vw;
+    }
+
+    .header .image-intro-article{
+        background-color:  hsl(256, 26%, 20%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 385px;
+        overflow: visible;
+        mix-blend-mode: exclusion;
+        height: 120.4vw;
+    }
+
+    .header .image-intro-article h2{
+        color: hsl(0,0%,98%);
+        font-size: 11.8vw;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 15px;
+        padding: 0 6.3vw;
+    }
+
+    .header .image-intro-article p{
+        color: rgba(250, 250, 250, 0.836);
+        font-size: 4.1vw;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 0 9.4vw;
+        margin-bottom: 8vw;
+    }
+
+    .header .image-intro-article button{
+        color: rgb(250, 250, 250);
+        background-color: transparent;
+        border: 2px solid hsl(0,0%,98%);
+        padding: 2.2vw 4vw;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 3.5vw;
+        font-weight: 400;
+    }
+
+    .diffrent{  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 60px;
+    }
+
+    .diffrent::before{
+        content: '';
+        position: absolute;
+        width: 32.1vw;
+        height: 1px;
+        background-color: hsl(273, 4%, 51%);
+        top: -30px;
+        left: 49%;
+        transform: translate(-50%, 50%);
+    }
+
+    .diffrent .diffrent-title{
+        margin-bottom: 50px;
+    }
+
+    .diffrent .diffrent-title h1{
+        color: hsl(270, 9%, 17%);
+        font-size: 11vw;
+        font-weight: 400;
+    }
+
+    .diffrent .how{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .diffrent .how > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 6.3vw;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .diffrent .how > div img{
+        width: 22%;
+        margin-bottom: 30px;
+    }
+
+    .diffrent .how > div .title h3{
+        font-size: 7.5vw;
+        font-weight: 400;
+        color: hsl(270, 9%, 17%);
+        margin-bottom: 20px;
+    }
+
+    .diffrent .how > div p{
+        color: hsla(276, 4%, 51%, 0.767);
+        font-size: 4.1vw;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    .find{
+        margin: 0 6.3vw;
+        padding: 16vw 6.5vw;
+        background-color: hsl(256, 26%, 20%);
+        background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: 100% 0;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .find .find-title{
+        margin-bottom: 9.5vw;
+    }
+
+    .find .find-title h1{
+        color: hsl(0,0%,98%);
+        font-size: 9.5vw;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .find button{
+        color: rgb(250, 250, 250);
+        background-color: transparent;
+        border: 2px solid hsl(0,0%,98%);
+        padding: 2.2vw 4vw;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 3.5vw;
+        font-weight: 400;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:  hsl(0, 0%, 98%);
+        background-image: url(images/bg-pattern-footer-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100vw 150px;
+        background-position: 0 0;
+        padding: 0 7vw 50px;
+    }
+
+    footer .footer-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 75px 0 40px;
+        margin-bottom: 40px;
+        width: 100%;
+        position: relative;
+    }
+
+    footer .footer-top::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.5px;
+        background-color:hsla(276, 4%, 51%, 0.377);
+        bottom: 0;
+    }
+
+    footer .footer-top .footer-top-logo{
+        margin-bottom: 5vw;
+    }
+
+    footer .footer-top .footer-top-logo img{
+        width: 30vw;
+    }
+
+    footer .footer-top .footer-social-links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(135px + 0.1rem);
+    }
+
+    footer .footer-top .footer-social-links a svg{
+        fill: #837D88;
+    }
+
+    footer .footer-down{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-down > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    footer .footer-down > div .first-title{
+        margin-bottom: 30px;
+    }
+
+    footer .footer-down > div .first-title{
+        color: hsl(276, 4%, 51%);
+        font-size: 5vw;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+
+    footer .footer-down > div .first-links ul li{
+        margin-bottom: 15px;
+        color: hsla(270, 9%, 17%, 0.87);
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 4.5vw;
+    }
+}
+
+
+@media screen and (min-width:360px) {
+    nav .hamburger .hamburger-links{
+        top: 23vw;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    nav .hamburger .hamburger-links{
+        top: 22vw;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    nav .hamburger .hamburger-links{
+        top: 21vw;
+        background-size: 100% 200px;
+    }
+}
+
+@media screen and (min-width:540px) {
+    nav .hamburger .hamburger-links{
+        top: 19.5vw;
+        background-size: 100% 150px;
+    }
+
+    nav .hamburger .hamburger-links ul{
+        padding: 80px 6.3vw;
+    }
+
+    footer .footer-top .footer-social-links{
+        width: 200px;
+    }
+
+    footer .footer-down > div .first-title{
+        font-size: 4.5vw;
+    }
+
+    footer .footer-down > div .first-links ul li{
+        font-size: 4vw;
+    }
+
+    footer .footer-down > div{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    nav{
+        padding: 5vw 6vw;
+    }
+
+    nav .hamburger .hamburger-links{
+        top: 13vw;
+        background-size: 100% 150px;
+    }
+
+    .header .image-intro{
+        background-image: url(images/image-intro-desktop.jpg);
+    }
+
+    .header .image-intro-article h2{
+        padding: 0 6vw;
+        margin-bottom: 25px;
+        font-size: 12vw;
+    }
+
+    .diffrent::before{
+        top: -60px;
+    }
+
+    .diffrent .diffrent-title{
+        margin-bottom: 120px;
+    }
+
+    .diffrent .how > div{
+        margin-bottom: 100px;
+    }
+
+    .diffrent .how > div img, footer .footer-top{
+        margin-bottom: 70px;
+    }
+
+    .diffrent .how > div .title h3{
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    nav{
+        padding: 2.5vw 7vw;
+    }
+
+    nav .nav-logo{
+        flex: 50%;;
+    }
+
+    nav .nav-links{
+        display: block;
+        flex: 50%;
+    }
+
+    nav .nav-links ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    nav .nav-links ul li{
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: hsl(273, 4%, 51%);
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    nav .nav-links ul li:hover{
+        color: hsl(270, 9%, 17%);
+    }
+
+    nav .nav-links ul button{
+        color: black;
+        background-color: hsl(0, 0%, 100%);
+        border: 2px solid hsl(270, 9%, 17%);
+        padding: 8px 16px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    nav .nav-links ul button:hover{
+        color: hsl(0, 0%, 98%);
+        background-color: hsl(270, 9%, 17%);
+        cursor: pointer;
+    }
+
+    nav .hamburger{
+        display: none;
+    }
+
+    .header{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(images/bg-pattern-intro-left-desktop.svg), url(images/bg-pattern-intro-right-desktop.svg);
+        background-size: 15%, 30%;
+        background-position: 0 400px, 100% -50px;
+        position: relative;    
+        padding-bottom: 20vw;    
+    }
+
+    .header .image-intro{
+        width: 450px;
+        height: 550px;
+        position: absolute;
+        top: 100px;
+        right: 40px;
+        z-index: 100;
+    }
+
+    .header .image-intro-article{
+        width: 100%;
+        height: auto;
+        text-align: left;
+        align-items: flex-start;
+        padding: 150px 0 150px 7vw;
+    }
+
+    .header .image-intro-article h2{
+        font-size: 5vw;
+        padding: 0;
+        padding-right: 56vw;
+        position: relative;
+    }
+
+    .header .image-intro-article h2::before{
+        content: '';
+        position: absolute;
+        width: 11vw;
+        height: 1px;
+        background-color: hsl(0, 0%, 98%);
+        top: -50px;
+        left: 0px;
+    }
+
+    .header .image-intro-article p{
+        font-size: 2vw;
+        padding: 0;
+        padding-right: 49vw;
+        margin-bottom: 4vw;
+    }
+
+    .header .image-intro-article button{
+        font-size: 1.5vw;
+        padding: 1vw 3vw;
+    }
+
+    .header .image-intro-article button:hover{
+        color: hsl(270, 9%, 17%);
+        background-color: hsl(0,0%,98%);
+        cursor: pointer;
+    }
+
+    .diffrent{
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 7vw;
+        margin-bottom: 120px;
+    }
+
+    .diffrent::before{
+        width: 12vw;
+        top: -40px;
+        left: 7vw;
+        transform: none;
+    }
+
+    .diffrent .diffrent-title{
+        margin-bottom: 50px;
+    }
+
+    .diffrent .diffrent-title h1{
+        font-size: 5vw;
+    }
+
+    .diffrent .how{
+        flex-direction: row;
+    }
+
+    .diffrent .how > div{
+        padding: 0;
+        align-items: flex-start;
+        justify-content: start;
+        text-align: left;
+        margin-right: 30px;
+        margin-bottom: 0;
+        min-height: 238px;
+    }
+
+    .diffrent .how > div img{
+        width: auto;
+        margin-bottom: 30px;
+    }
+
+    .diffrent .how > div .title h3{
+        font-size: 2.2vw;
+        margin-bottom: 15px;
+    }
+
+    .diffrent .how > div p{
+        font-size: 1.3vw;
+    }
+
+    .find{
+        margin: 0 7vw 15vw;
+        text-align: left;
+        background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:7vw;
+    }
+
+    .find .find-title{
+        width: 70%;
+        margin-bottom: 0;
+        padding-right: 6vw;
+    }
+
+    .find .find-title h1{
+        font-size: 5vw;
+    }
+
+    .find button{
+        width: 200px;
+        font-size: 1vw;
+        padding: 1vw;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    .find button:hover{
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(270, 9%, 17%);
+    }
+
+    footer{
+        background-image: url(images/bg-pattern-footer-desktop.svg);
+        background-size: 45%;
+        padding: 0 7vw 50px;
+        align-items: flex-start;
+    }
+
+    footer .footer-top{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+    footer .footer-top .footer-top-logo{
+        margin-bottom: 0;
+    }
+
+    footer .footer-top .footer-top-logo img{
+        width: auto;
+    }
+
+    footer .footer-top .footer-social-links{
+        width: calc(135px + 0.1rem);
+    }
+
+    footer .footer-top .footer-social-links a svg:hover{
+        cursor: pointer;
+        fill: hsl(270, 9%, 17%);
+    }
+
+    footer .footer-top::before{
+        bottom: 1px;
+    }
+
+    footer .footer-down{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        width: 80%;
+    }
+
+    footer .footer-down > div{
+        align-items: flex-start;
+    }
+
+    footer .footer-down > div .first-title{
+        font-size: 1.5vw;
+        cursor: pointer;
+    
+    }
+
+    footer .footer-down > div .first-links ul li{
+        font-size: 1.2vw;
+    }
+
+    footer .footer-down > div .first-links ul li:hover{
+        cursor: pointer;
+        text-decoration: underline hsl(270, 9%, 17%);
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .header .image-intro{
+        height: 650px;
+        right: 115px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    nav {
+        padding: 1.6vw 10vw;
+    }
+
+    nav .nav-links{
+        flex: 30%;
+    }
+
+    .header{
+        background-position: 0 370px, 100% -50px;
+    }
+
+    .header .image-intro-article{
+        padding: 150px 0 150px 10vw;
+    }
+
+    .header .image-intro-article h2{
+        padding-right: 53vw;
+    }
+
+    .header .image-intro-article p{
+        font-size: 1.2vw;
+        padding-right: 48vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .header .image-intro{
+        width: 500px;
+        height: 600px;
+        right: 155px;
+        background-size: contain;
+    }
+
+    .header .image-intro-article button{
+        font-size: 1vw;
+        padding: 1vw 2vw;
+    }
+
+    .diffrent{
+        padding: 0 10vw;
+    }
+
+    .diffrent::before{
+        left: 10vw;
+    }
+
+    .diffrent .how > div:nth-child(3){
+        margin-right: 0;
+    }
+
+    .diffrent .how > div .title h3{
+        font-size: 2vw;
+    }
+
+    .diffrent .how > div p{
+        font-size: 1vw;
+    }
+
+    .find{
+        margin: 0 10vw 11vw;
+        padding: 5vw 7vw;
+    }
+
+    .find .find-title h1 {
+        font-size: 4.4vw;
+    }
+
+    footer{
+        padding: 0 10vw 20px;
+    }
+}
+
+@media screen and (min-width:1536px) {
+    
+    .header{
+        background-position: 0 300px, 100% -50px;
+        padding-bottom: 15vw;
+    }
+
+    .header .image-intro{
+        right: 170px;
+     
+    }
+
+}
